@@ -7,7 +7,7 @@
 */
 
 /**
- * @ingroup     cpu_sam3x8e
+ * @ingroup     cpu_sam4s16c
  * @{
  *
  * @file        spi.c
@@ -28,7 +28,7 @@
 #include "periph/gpio.h"
 #include "periph_conf.h"
 #include "periph/spi.h"
-#include "sam3x8e.h"
+#include "sam4s.h"
 
 /* guard this file in case no SPI device is defined */
 #if SPI_NUMOF
@@ -182,8 +182,10 @@ int spi_init_slave(spi_t dev, spi_conf_t conf, char(*cb)(char data))
             NVIC_SetPriority(SPI_0_IRQ, SPI_0_IRQ_PRIO);
             NVIC_EnableIRQ(SPI_0_IRQ);
             /* Initialize predefined NSS pin as output so it is "disabled" */
+/* TODO: do we really need this?
             PIOA->PIO_PER |= PIO_PA28A_SPI0_NPCS0;
             PIOA->PIO_OER |= PIO_PA28A_SPI0_NPCS0;
+*/
             break;
 #endif /* SPI_0_EN */
         default:
@@ -279,9 +281,12 @@ int spi_conf_pins(spi_t dev)
             SPI_0_SCK_PORT->PIO_PDR |= SPI_0_SCK_PIN;
 
             /* Peripheral A */
-            SPI_0_MISO_PORT->PIO_ABSR &= ~SPI_0_MISO_PIN;
-            SPI_0_MOSI_PORT->PIO_ABSR &= ~SPI_0_MOSI_PIN;
-            SPI_0_SCK_PORT->PIO_ABSR &= ~SPI_0_SCK_PIN;
+            SPI_0_MISO_PORT->PIO_ABCDSR[0] &= ~SPI_0_MISO_PIN;
+            SPI_0_MISO_PORT->PIO_ABCDSR[1] &= ~SPI_0_MISO_PIN;
+            SPI_0_MOSI_PORT->PIO_ABCDSR[0] &= ~SPI_0_MOSI_PIN;
+            SPI_0_MOSI_PORT->PIO_ABCDSR[1] &= ~SPI_0_MOSI_PIN;
+            SPI_0_SCK_PORT->PIO_ABCDSR[0] &= ~SPI_0_SCK_PIN;
+            SPI_0_SCK_PORT->PIO_ABCDSR[1] &= ~SPI_0_SCK_PIN;
 
             break;
 #endif /* SPI_0_EN */

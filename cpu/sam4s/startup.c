@@ -170,7 +170,7 @@ void isr_udp(void)                  __attribute__ ((weak, alias("dummy_handler")
 __attribute__ ((section(".vectors")))
 const void *interrupt_vector[] = {
     /* Stack pointer */
-    (void*) (&_estack),             /* pointer to the top of the empty stack */
+    (void*) (&__StackTop),          /* pointer to the top of the empty stack */
     /* Cortex-M handlers */
     (void*) reset_handler,          /* entry point of the program */
     (void*) isr_nmi,                /* non maskable interrupt handler */

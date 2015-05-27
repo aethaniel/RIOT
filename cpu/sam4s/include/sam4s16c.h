@@ -325,7 +325,7 @@ void WDT_Handler        ( void );
 #define ID_HSMCI  (18) /**< \brief Multimedia Card Interface (HSMCI) */
 #define ID_TWI0   (19) /**< \brief Two Wire Interface 0 (TWI0) */
 #define ID_TWI1   (20) /**< \brief Two Wire Interface 1 (TWI1) */
-#define ID_SPI    (21) /**< \brief Serial Peripheral Interface (SPI) */
+#define ID_SPI0   (21) /**< \brief Serial Peripheral Interface (SPI) */
 #define ID_SSC    (22) /**< \brief Synchronous Serial Controller (SSC) */
 #define ID_TC0    (23) /**< \brief Timer/Counter 0 (TC0) */
 #define ID_TC1    (24) /**< \brief Timer/Counter 1 (TC1) */
@@ -354,8 +354,8 @@ void WDT_Handler        ( void );
 #define PDC_HSMCI  (0x40000100U) /**< \brief (PDC_HSMCI ) Base Address */
 #define SSC        (0x40004000U) /**< \brief (SSC       ) Base Address */
 #define PDC_SSC    (0x40004100U) /**< \brief (PDC_SSC   ) Base Address */
-#define SPI        (0x40008000U) /**< \brief (SPI       ) Base Address */
-#define PDC_SPI    (0x40008100U) /**< \brief (PDC_SPI   ) Base Address */
+#define SPI0       (0x40008000U) /**< \brief (SPI       ) Base Address */
+#define PDC_SPI0   (0x40008100U) /**< \brief (PDC_SPI   ) Base Address */
 #define TC0        (0x40010000U) /**< \brief (TC0       ) Base Address */
 #define TC1        (0x40014000U) /**< \brief (TC1       ) Base Address */
 #define TWI0       (0x40018000U) /**< \brief (TWI0      ) Base Address */
@@ -399,8 +399,8 @@ void WDT_Handler        ( void );
 #define PDC_HSMCI  ((Pdc    *)0x40000100U) /**< \brief (PDC_HSMCI ) Base Address */
 #define SSC        ((Ssc    *)0x40004000U) /**< \brief (SSC       ) Base Address */
 #define PDC_SSC    ((Pdc    *)0x40004100U) /**< \brief (PDC_SSC   ) Base Address */
-#define SPI        ((Spi    *)0x40008000U) /**< \brief (SPI       ) Base Address */
-#define PDC_SPI    ((Pdc    *)0x40008100U) /**< \brief (PDC_SPI   ) Base Address */
+#define SPI0       ((Spi    *)0x40008000U) /**< \brief (SPI       ) Base Address */
+#define PDC_SPI0   ((Pdc    *)0x40008100U) /**< \brief (PDC_SPI   ) Base Address */
 #define TC0        ((Tc     *)0x40010000U) /**< \brief (TC0       ) Base Address */
 #define TC1        ((Tc     *)0x40014000U) /**< \brief (TC1       ) Base Address */
 #define TWI0       ((Twi    *)0x40018000U) /**< \brief (TWI0      ) Base Address */
@@ -522,7 +522,7 @@ void WDT_Handler        ( void );
 #endif
 
 /* HYSTeresis levels: please refer to Electrical Characteristics */
-#define ACC_ACR_HYST_50MV_MAX	          (0x01UL)
+#define ACC_ACR_HYST_50MV_MAX	        (0x01UL)
 #define ACC_ACR_HYST_90MV_MAX           (0x11UL)
 
 #ifdef __cplusplus

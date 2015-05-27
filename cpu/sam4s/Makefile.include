@@ -1,5 +1,5 @@
 # this CPU implementation is using the new core/CPU interface
-export CFLAGS += -DCOREIF_NG=1
+export CFLAGS += -DCOREIF_NG=1 -D__SAM4S16C__
 
 # export the peripheral drivers to be linked into the final binary
 export USEMODULE += periph
