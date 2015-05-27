@@ -1,0 +1,5 @@
+/**
+ * @defgroup    cpu_sam4s16c_components SAM4S Components
+ * @brief       SAM4S Components
+ * @ingroup     cpu_sam4s16c
+ */

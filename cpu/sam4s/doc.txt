@@ -1,0 +1,10 @@
+/**
+ * @defgroup        cpu_sam4s16c Atmel SAM4S16C
+ * @ingroup         cpu
+ * @brief           Atmel SAM4S16C Cortex-M3 MCU specific code
+ */
+
+/**
+ * @defgroup        cpu_sam4s16c_definitions Atmel SAM4S16C Definitions
+ * @ingroup         cpu_sam4s16c
+ */
