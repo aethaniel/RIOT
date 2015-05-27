@@ -85,7 +85,7 @@ extern "C" {
 #define UART_2_IRQ          USART1_IRQn
 #define UART_2_ISR          isr_usart1
 /* UART 2 pin configuration */
-#define UART_2_PORT         PIOD
+#define UART_2_PORT         PIOA
 #define UART_2_PINS         (PIO_PA21 | PIO_PA22)
 /** @} */
 
@@ -105,9 +105,9 @@ extern "C" {
 #define SPI_0_IRQ_PRIO      1
 
 /* SPI 0 pin configuration */
-#define SPI_0_MISO_PIN      PIO_PA12A_SPI0_MISO
-#define SPI_0_MOSI_PIN      PIO_PA13A_SPI0_MOSI
-#define SPI_0_SCK_PIN       PIO_PA14A_SPI0_SPCK
+#define SPI_0_MISO_PIN      PIO_PA12A_MISO
+#define SPI_0_MOSI_PIN      PIO_PA13A_MOSI
+#define SPI_0_SCK_PIN       PIO_PA14A_SPCK
 #define SPI_0_MISO_PORT     PIOA
 #define SPI_0_MOSI_PORT     PIOA
 #define SPI_0_SCK_PORT      PIOA

@@ -1,5 +1,5 @@
 # define the cpu used by the Atmel SAM4S-Xplained board
-export CPU = sam4s16c
+export CPU = sam4s
 export CPU_MODEL = sam4s16c
 
 # set the default port
